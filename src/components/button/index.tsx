@@ -1,7 +1,14 @@
+import React from 'react';
+import './style.scss';
+
 interface ButtonProps {
     label: string
 }
 
-export const Button = (props: ButtonProps) => {
-
+const Button = (props: ButtonProps) => {
+    return (
+        <button className='button'>{props.label}</button>
+    )
 }
+
+export default Button;
