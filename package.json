@@ -4,15 +4,26 @@
   "description": "",
   "scripts": {
     "rollup": "rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "Mehmet Guvenc",
   "license": "ISC",
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.12",
+    "@storybook/addon-interactions": "^7.6.12",
+    "@storybook/addon-links": "^7.6.12",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.12",
+    "@storybook/react": "^7.6.12",
+    "@storybook/react-webpack5": "^7.6.12",
+    "@storybook/test": "^7.6.12",
     "@types/react": "^18.2.55",
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.34",
     "react": "^18.2.0",
+    "storybook": "^7.6.12",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3"
   },
