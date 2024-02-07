@@ -1,2 +1,1 @@
-export * from './button';
-export { Tab } from './tab';
+export { default as Tab } from './tab';

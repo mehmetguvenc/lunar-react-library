@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './style.scss';
 
-interface TabProps {
-    headers: string[]
+export interface TabProps {
+    items: { title: string, content: string }[],
+    isLarge: boolean
 }
 
-export const Tab = (props: TabProps) => {
+const Tab = ({
+    items = [], isLarge = false,
+    ...props }: TabProps) => {
+
+    const [index, setIndex] = useState<number>(0)
     return (
         <div className="tab">
-            <div className="tab-header">
-                {props.headers.map(x => { return (<div className="tab-header-item">{x}</div>) })}
+            <div className="tab-head">
+                {items.map((x, i) => {
+                    return <div className="tab-header" onClick={() => setIndex(i)}>{x.title}</div>
+                })}
+            </div>
+            <div className="tab-body">
+                <div className="tab-content">
+                    {items[index].content}
+                </div>
             </div>
         </div>
     )

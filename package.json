@@ -5,8 +5,8 @@
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "sb": "storybook dev -p --test 6006",
+    "build-sb": "storybook build"
   },
   "author": "Mehmet Guvenc",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "@storybook/addon-interactions": "^7.6.12",
     "@storybook/addon-links": "^7.6.12",
     "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/addon-styling-webpack": "^0.0.6",
     "@storybook/blocks": "^7.6.12",
     "@storybook/react": "^7.6.12",
     "@storybook/react-webpack5": "^7.6.12",
@@ -24,6 +25,7 @@
     "postcss": "^8.4.34",
     "react": "^18.2.0",
     "storybook": "^7.6.12",
+    "storybook-addon-sass-postcss": "^0.1.4",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3"
   },
@@ -34,7 +36,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "10.0.0",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@testing-library/react": "^14.2.1",
     "@types/jest": "^29.5.12",
     "autoprefixer": "^10.4.17",
@@ -47,11 +49,17 @@
     "react-dom": "^18.2.0",
     "rollup": "^4.9.6",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-sass": "^1.12.21",
     "rollup-plugin-scss": "^4.0.0",
     "rollup-plugin-styles": "^4.0.0",
-    "ts-node": "^10.9.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0",
+    "style-loader": "^3.3.4",
+    "ts-node": "^10.9.2",
+    "webpack": "^5.90.1"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
